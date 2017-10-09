@@ -6,10 +6,12 @@
 
   <div class="main">
     <label for="">Enter your Number:</label>
-    <input type="number">
-    <button class="btn btn-success">Check</button>
 
-    <button class="btn btn-danger">Restart</button>
+    <input type="number" [value]="guessedNo" (input)="guessedNo=$event.target.value">
+
+    <button class="btn btn-success" (click)="checkNum()">Check</button>
+
+    <button class="btn btn-danger" (click)="ngOnInit()">Restart</button>
 
   </div>
 

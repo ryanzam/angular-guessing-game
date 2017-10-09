@@ -14,6 +14,14 @@ export class GuessNumComponent implements OnInit {
 
   constructor() { }
 
+  checkNum() {
+
+    this.noOfTries = this.noOfTries +1;
+
+    this.difference = Math.abs(this.originalNo - this.guessedNo);
+    
+
+  }
 
 
   ngOnInit() {
@@ -21,7 +29,7 @@ export class GuessNumComponent implements OnInit {
     console.log(this.originalNo);
     this.noOfTries = 0;
     this.guessedNo = null;
-    this.difference = null;
+    this.difference = 0;
   }
 
 }

@@ -18,8 +18,8 @@ export class GuessNumComponent implements OnInit {
 
     this.noOfTries = this.noOfTries +1;
 
-    this.difference = Math.abs(this.originalNo - this.guessedNo);
-    
+    this.difference = this.originalNo - this.guessedNo;
+
 
   }
 
@@ -29,7 +29,7 @@ export class GuessNumComponent implements OnInit {
     console.log(this.originalNo);
     this.noOfTries = 0;
     this.guessedNo = null;
-    this.difference = 0;
+    this.difference = null;
   }
 
 }

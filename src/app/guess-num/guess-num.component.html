@@ -15,6 +15,13 @@
 
   </div>
 
+    <div>
+      <p *ngIf="difference<0" class="alert alert-warning">Your Guess is Higher!!</p>
+
+      <p *ngIf="difference>0" class="alert alert-warning">Your guess is Lower!!</p>
+
+      <p *ngIf="difference===0" class="alert alert-success">Congrats!! you got it :))</p>
+    </div>
 
   <p class="text-info">Number of your tries:
     <span class="badge">{{noOfTries}}</span>

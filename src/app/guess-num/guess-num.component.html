@@ -2,25 +2,25 @@
   <h1>Number Guessing Game - Angular 2</h1>
   <hr>
 
-  <p class="well lead">Guess a number between 1 and 100</p>
+  <p>Guess a number between 1 and 100</p>
 
-  <div class="main">
+  <div>
     <label for="">Enter your Number:</label>
 
     <input type="number" [value]="guessedNo" (input)="guessedNo=$event.target.value">
 
-    <button class="btn btn-success" (click)="checkNum()">Check</button>
+    <button  (click)="checkNum()">Check</button>
 
-    <button class="btn btn-danger" (click)="ngOnInit()">Restart</button>
+    <button  (click)="ngOnInit()">Restart</button>
 
   </div>
 
     <div>
-      <p *ngIf="difference<0" class="alert alert-warning">Your Guess is Higher!!</p>
+      <p *ngIf="difference<0" >Your Guess is Higher!!</p>
 
-      <p *ngIf="difference>0" class="alert alert-warning">Your guess is Lower!!</p>
+      <p *ngIf="difference>0" >Your guess is Lower!!</p>
 
-      <p *ngIf="difference===0" class="alert alert-success">Congrats!! you got it :))</p>
+      <p *ngIf="difference===0">Congrats!! you got it :))</p>
     </div>
 
   <p class="text-info">Number of your tries:

@@ -19,10 +19,14 @@ export class GuessNumComponent implements OnInit {
     this.noOfTries = this.noOfTries +1;
 
     this.difference = this.originalNo - this.guessedNo;
-
-
   }
 
+  restart(){
+    this.originalNo= Math.floor((Math.random()*100) +1);
+    this.noOfTries = 0;
+    this.guessedNo = null;
+    this.difference = null;
+  }
 
   ngOnInit() {
     this.originalNo= Math.floor((Math.random()*100) +1);
